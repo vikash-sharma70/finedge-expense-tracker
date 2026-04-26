@@ -4,7 +4,8 @@
   "description": "FinEdge - Personal Finance &amp; Expense Tracker API built using Node.js and Express. Supports user management, transactions, budgeting, and analytics.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,21 @@
   "bugs": {
     "url": "https://github.com/vikash-sharma70/finedge-expense-tracker/issues"
   },
-  "homepage": "https://github.com/vikash-sharma70/finedge-expense-tracker#readme"
+  "homepage": "https://github.com/vikash-sharma70/finedge-expense-tracker#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.4.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.2.0",
+    "mongoose": "^9.5.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
