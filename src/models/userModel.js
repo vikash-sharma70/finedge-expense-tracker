@@ -54,8 +54,8 @@ const userSchema = new mongoose.Schema(
   }
 )
 
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next()
+userSchema.pre("save", async function () {
+  if (!this.isModified("password")) return
 
   const saltRounds = parseInt(process.env.BCRYPT_SALT_ROUNDS) || 12
   this.password = await bcrypt.hash(this.password, saltRounds)
@@ -63,8 +63,6 @@ userSchema.pre("save", async function (next) {
   if (!this.isNew) {
     this.passwordChangedAt = Date.now() - 1000
   }
-
-  next()
 })
 
 userSchema.methods.comparePassword = async function (candidatePassword) {

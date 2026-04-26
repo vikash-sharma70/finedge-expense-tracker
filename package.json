@@ -2,10 +2,10 @@
   "name": "finedge-expense-tracker",
   "version": "1.0.0",
   "description": "FinEdge - Personal Finance &amp; Expense Tracker API built using Node.js and Express. Supports user management, transactions, budgeting, and analytics.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
